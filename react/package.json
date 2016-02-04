@@ -1,0 +1,33 @@
+{
+  "name": "goalie-task-tracker-ui-react",
+  "description": "UI built with React for Goalie",
+  "version": "0.3.1",
+  "author": "bdzevel",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "echo 'Nothing to start'",
+    "postinstall": "grunt",
+    "build-dev": "browserify ./src/app.jsx -o ./dist/goalie-react-ui.js",
+    "build": "browserify ./src/app.jsx | uglifyjs -cm -o ./dist/goalie-react-ui.js"
+  },
+  "dependencies": {
+    "browserify": "^12.0.1",
+    "flux": "^2.1.1",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-uglify": "^0.11.1",
+    "jquery": "^2.1.4",
+    "react": "^0.14.3",
+    "react-bootstrap": "^0.28.2",
+    "react-dom": "^0.14.3",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.6.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
