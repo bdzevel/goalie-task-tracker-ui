@@ -8,8 +8,8 @@
   "scripts": {
     "start": "echo 'Nothing to start'",
     "postinstall": "grunt",
-    "build-dev": "browserify ./src/app.jsx -o ./dist/goalie-react-ui.js",
-    "build": "browserify ./src/app.jsx | uglifyjs -cm -o ./dist/goalie-react-ui.js"
+    "build-dev": "browserify ./src/app.jsx -o ./dist/goalie-ui-react.js",
+    "build": "browserify ./src/app.jsx | uglifyjs -cm -o ./dist/goalie-ui-react.js"
   },
   "dependencies": {
     "browserify": "^12.0.1",
