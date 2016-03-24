@@ -39,12 +39,20 @@ module.exports = function(grunt)
 				sourceMap: true,
 				sourceMapName: "dist/goalie-ui-react.map"
 			}
+		},
+		copy:
+		{
+			app:
+			{
+				files: [ {expand: false, src: ["dist/goalie-ui-react.js"], dest: "dist/public/goalie-ui-react.js", filter: 'isFile'} ],
+			},
 		}
 	});
 
 	grunt.loadNpmTasks("grunt-bower-task");
 	grunt.loadNpmTasks("grunt-browserify");
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask("default", ["bower", "browserify", "uglify"]);
+	grunt.registerTask("default", ["bower", "browserify", "uglify", "copy"]);
 };
