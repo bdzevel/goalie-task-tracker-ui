@@ -27,3 +27,5 @@ react/node_modules
 
 *.srl
 .vscode
+
+react/dist/public/lib

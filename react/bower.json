@@ -1,6 +1,6 @@
 {
-  "name": "goalie",
-  "description": "Web application for task tracking",
+  "name": "goalie-task-tracker-ui-react",
+  "description": "UI built with React for Goalie",
   "main": "",
   "authors": [
     "bdzevel"
@@ -18,9 +18,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "public/lib",
-    "test",
-    "tests"
+    "dist/public/lib"
   ],
   "exportsOverride": {
     "jquery": {

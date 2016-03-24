@@ -4,6 +4,19 @@ module.exports = function(grunt)
 {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
+		bower:
+		{
+			install:
+			{
+				options:
+				{
+					targetDir: "dist/public/lib",
+					layout: 'byComponent',
+					cleanTargetDir: true,
+					cleanBowerDir: true
+				}
+			}
+		},
 		browserify:
 		{
 			app:
@@ -29,8 +42,9 @@ module.exports = function(grunt)
 		}
 	});
 
+	grunt.loadNpmTasks("grunt-bower-task");
 	grunt.loadNpmTasks("grunt-browserify");
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask("default", ['browserify', 'uglify']);
+	grunt.registerTask("default", ["bower", "browserify", "uglify"]);
 };
