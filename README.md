@@ -15,7 +15,7 @@ NOTES:
 
 Other frameworks may additionally be used and added in this project in the future. For example, Angular2 might be added once it's stable.
 
-As of writing, Angular2 was stil in development and proved to be unusable. The artifacts from my playing with it are included but are not at all complete (or even, anything, really).
+As of writing, Angular2 was still in development and proved to be unusable. The artifacts from my playing with it are included but are not at all complete (or even anything, really).
 
 After building the UI, you will need to manually copy the contents of the 'dist/public' folder into the appropriate folder ("public") in the node.js project. The .map file is not needed to run the app.
 
